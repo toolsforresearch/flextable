@@ -303,7 +303,7 @@ latex_cline <- function(w, cols, from, to) {
   is_transparent <- colalpha(cols) < 1
   cols <- colcode0(cols)
   z <- sprintf(
-    "\\docline{%spt}{%s}{%s}",
+    "\\noalign{\\global\\setlength{\\arrayrulewidth}{%spt}}\\arrayrulecolor[HTML]{%s}\\cline{%s}",
     size, cols, paste(from, to, sep = "-")
   )
   z[w < .001 | is_transparent] <- ""

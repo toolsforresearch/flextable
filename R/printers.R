@@ -268,7 +268,6 @@ latex_value <- function(x,
   usepackage_latex("hyperref")
 
   out <- paste(
-    cline_cmd,
     latex_str(x,
       ft.align = ft.align,
       ft.tabcolsep = ft.tabcolsep,
